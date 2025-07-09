@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kuba Hrouda – Portfolio</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 2rem;
+      background: #fff;
+      color: #000;
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 0.2rem;
+    }
+
+    h2 {
+      font-size: 1.5rem;
+      font-weight: normal;
+      margin-top: 0;
+      margin-bottom: 2rem;
+    }
+
+    .section {
+      border-top: 1px solid #ddd;
+      padding: 1rem 0;
+    }
+
+    .section-header {
+      display: flex;
+      justify-content: space-between;
+      cursor: pointer;
+      user-select: none;
+    }
+
+    .arrow {
+      transition: transform 0.2s ease;
+    }
+
+    .section.open .arrow {
+      transform: rotate(180deg);
+    }
+
+    .tiles {
+      margin-top: 1rem;
+      display: none;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .section.open .tiles {
+      display: flex;
+    }
+
+    .tile {
+      display: flex;
+      gap: 1rem;
+      border: 1px solid #ddd;
+      padding: 1rem;
+      border-radius: 5px;
+    }
+
+    .tile-image {
+      width: 120px;
+      height: 80px;
+      background: #eee;
+      flex-shrink: 0;
+    }
+
+    .tile-content h4 {
+      margin: 0 0 0.5rem 0;
+    }
+
+    .tile-content p {
+      margin: 0;
+      font-size: 0.9rem;
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+  <h1>Kuba Hrouda</h1>
+  <h2>Prosím, dejte mi práci</h2>
+
+  <div class="section" id="reportaze">
+    <div class="section-header" onclick="toggleSection('reportaze')">
+      <span>Reportáže</span>
+      <span class="arrow">▼</span>
+    </div>
+    <div class="tiles">
+      <div class="tile">
+        <div class="tile-image"></div>
+        <div class="tile-content">
+          <h4>Název reportáže</h4>
+          <p>Krátký popis nebo úvodní text k reportáži.</p>
+        </div>
+      </div>
+      <!-- Další dlaždice zde -->
+    </div>
+  </div>
+
+  <div class="section" id="foceni">
+    <div class="section-header" onclick="toggleSection('foceni')">
+      <span>Focení</span>
+      <span class="arrow">▼</span>
+    </div>
+    <div class="tiles">
+      <div class="tile">
+        <div class="tile-image"></div>
+        <div class="tile-content">
+          <h4>Portrét – Jan Novák</h4>
+          <p>Fotografie portrétu z letního focení v Brně.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section" id="reely">
+    <div class="section-header" onclick="toggleSection('reely')">
+      <span>Reely</span>
+      <span class="arrow">▼</span>
+    </div>
+    <div class="tiles">
+      <div class="tile">
+        <div class="tile-image"></div>
+        <div class="tile-content">
+          <h4>Ukázka z koncertu</h4>
+          <p>Krátké video z koncertu v Lucerně.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function toggleSection(id) {
+      const section = document.getElementById(id);
+      section.classList.toggle('open');
+    }
+  </script>
+</body>
+</html>
