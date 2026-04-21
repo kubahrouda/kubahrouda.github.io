@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kuba Hrouda – Portfolio</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 2rem;
+      background: #fff;
+      color: #000;
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 0.2rem;
+    }
+
+    h2 {
+      font-size: 1.5rem;
+      font-weight: normal;
+      margin-top: 0;
+      margin-bottom: 2rem;
+    }
+
+    h3 {
+      font-size: 0.5rem;
+      font-weight: normal;
+      margin-top: 0;
+      margin-bottom: 2rem;
+    }    
+
+    .section {
+      border-top: 1px solid #ddd;
+      padding: 1rem 0;
+    }
+
+    .section-header {
+      display: flex;
+      justify-content: space-between;
+      cursor: pointer;
+      user-select: none;
+    }
+
+    .arrow {
+      transition: transform 0.2s ease;
+    }
+
+    .section.open .arrow {
+      transform: rotate(180deg);
+    }
+
+    .tiles {
+      margin-top: 1rem;
+      display: none;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .section.open .tiles {
+      display: flex;
+    }
+
+    .tile {
+      display: flex;
+      gap: 1rem;
+      border: 1px solid #ddd;
+      padding: 1rem;
+      border-radius: 5px;
+    }
+
+    .tile-image {
+      width: 120px;
+      height: 80px;
+      background: #eee;
+      flex-shrink: 0;
+    }
+
+    .tile-content h4 {
+      margin: 0 0 0.5rem 0;
+    }
+
+    .tile-content p {
+      margin: 0;
+      font-size: 0.9rem;
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+  <h1>Kuba Hrouda</h1>
+  <h2> <strike>Prosím, dejte mi práci</strike> V tuto chvíli je práce až moc </h2>
+
+  
+  <div class="section" id="popularizace">
+    <div class="section-header" onclick="toggleSection('popularizace')">
+      <span>Popularizační texty</span>
+      <span class="arrow">▼</span>
+    </div>
+    <div class="tiles">
+
+      <div class="tile">
+        <div class="tile-image" style="background-image: url('houba_box.png'); background-size: cover; background-position: center;"></div>
+        <div class="tile-content">
+          <a href="myko_esej_klima.pdf"><h4>Esej • Globální klimatické změny – týkají se i hub?</h4></a>
+          <p>Klimatické změny dopadají i na druhy hub s klíčovou ekologickou rolí, což může vést k narušení symbiontských vztahů či zvýšení produkce mykotoxinů ohrožujících potraviny. Některé houby však naopak mohou nabízet řešení jejich příčin.</p>
+        </div>
+       </div> 
+      
+      <div class="tile">
+        <div class="tile-image" style="background-image: url('jespak_box.png'); background-size: cover; background-position: center;"></div>
+        <div class="tile-content">
+          <a href="ornito_esej_migrace.pdf"><h4>Esej • Anantropogenní změny v ptačí migraci a možnosti jejich sledování</h4></a>
+          <p>Lidská činnost mění ptačí migraci a ohrožuje tak přežití některých druhů ptáků. Jak je možné sledovat jejich pohyb, a získat tak data klíčová pro porozumění dopadům na ekosystémy i pro jejich ochranu?</p>
+        </div>
+       </div>
+
+      
+      <!-- Další dlaždice zde -->
+    </div>
+  </div>
+
+
+ <div class="section" id="publikace">
+    <div class="section-header" onclick="toggleSection('publikace')">
+      <span>Publikace a odborné materiály</span>
+      <span class="arrow">▼</span>
+    </div>
+    <div class="tiles">
+      <div class="tile">
+        <div class="tile-image" style="background-image: url('powerlines_box.jpg'); background-size: cover; background-position: center;"></div>
+        <div class="tile-content">
+          <a href="https://bioone.org/journals/journal-of-vertebrate-biology/volume-70/issue-2/jvb.21027/Birds-in-power-line-corridors--effects-of-vegetation-mowing/10.25225/jvb.21027.full"><h4>Paper • Birds in power-line corridors: effects of vegetation mowing on avian diversity and abundance</h4></a>
+          <p>Power line corridors in forested areas positively impact bird communities, increasing both species richness and abundance compared to surrounding forests - partially by supporting open-habitat specialists.</p>
+        </div>
+      </div>
+
+      <div class="tile">
+        <div class="tile-image" style="background-image: url('bird_evolution_box.jpg'); background-size: cover; background-position: center;"></div>
+        <div class="tile-content">
+          <a href="poster Bangor_na github web.pdf"><h4>Poster • Migratory birds in urban landscapes: comparing seasonal abundancies in human-altered areas</h4></a>
+          <p>Migratory birds use urban areas differently across seasons. Our results show why might some species rely on cities more during breeding, while others during wintering - with related species often sharing similar patterns.</p>
+          <p>Presented at EOU Congress 2025 in Bangor; <b>awarded the Best Poster prize</b></p>
+        </div>
+       </div>
+
+          
+      
+      <div class="tile">
+        <div class="tile-image" style="background-image: url('SMD_box.jpg'); background-size: cover; background-position: center;"></div>
+        <div class="tile-content">
+          <a href="fledglings_EN_poster_Hrouda_TISK.pdf"><h4>Poster • Seasonal changes in habitat preferences of migratory birds</h4></a>
+          <p>Using species distribution modeling (SDM) to analyze habitat preferences of migratory birds, ultimately working towards a comprehensive algorithm for predicting species occurrence and informing conservation efforts.</p>
+          <p>Presented at EOU Fledglings 2024 and Zoologické dny 2024; <b>awarded the CSO Prize for best student ornithological poster</b></p>
+        </div>
+       </div>
+
+<!--      <div class="tile">
+        <div class="tile-image" style="background-image: url('urbanizace_box.png'); background-size: cover; background-position: center;"></div>
+        <div class="tile-content">
+          <a href="zoodny 2025 ubanni zmeny github.pdf"><h4>Poster • Ptáci v urbánním prostředí: sezónní změny habitatových preferencí</h4></a>
+          <p>Jsou pro ptáky urbánní oblasti atraktivnější než rurální prostředí? Liší se míra jejich využití v různých ročních obdobích? Porovnání na základě vztahu relativní abundance druhů, míry urbanizace a zeměpisné šířky.</p>
+          <p>Prezentováno na Zoologických dnech 2025</p>
+        </div>
+      </div> 
+-->
+      
+    </div>
+  </div>
+
+
+
+    
+  <div class="section" id="podcasty">
+    <div class="section-header" onclick="toggleSection('podcasty')">
+      <span>Podcasty a reportáže</span>
+      <span class="arrow">▼</span>
+    </div>
+        <div class="tiles">
+      <div class="tile">
+        <div class="tile-image" style="background-image: url('ON_box.png'); background-size: cover; background-position: center;"></div>
+        <div class="tile-content">
+          <h4><a href="https://www.ceskatelevize.cz/porady/1095913550-nedej-se/226562248430001/">ČT • Občanské noviny: Ptejme se vědců!</a></h4>
+          <p>Orientovat se v záplavě každodenních informací je stále obtížnější - avšak díky projektu "Zeptej se vědce" je možné získat odbornou a podloženou odpověď na jakkoliv složitou otázku. <a href="https://www.ceskatelevize.cz/porady/1095913550-nedej-se/226562248430001/">iVysílání ČT</a></p>
+        </div>
+      </div>
+    </div>
+
+  <div class="tiles">
+      <div class="tile">
+        <div class="tile-image" style="background-image: url('zaostreno_box.jpg'); background-size: cover; background-position: center;"></div>
+        <div class="tile-content">
+          <h4><a href="https://plus.rozhlas.cz/pribeh-losa-emila-ukazuje-nastrahy-ceske-krajiny-dalnice-i-lany-poli-tvori-9599864">ČRo • Zaostřeno: Fragmentace krajiny</a></h4>
+          <p>Příběh losa Emila ukazuje, jak komplikovaná může být v české kulturní (a fragmentované) krajině migrace mnoha různých druhů. Jaké negativní dopady může neprostupná krajina mít, a je možné jim předejít? <a href="https://www.mujrozhlas.cz/zaostreno/pribeh-losa-emila-ukazuje-nastrahy-ceske-krajiny-dalnice-i-lany-poli-tvori-barieru-pro">Audioarchiv ČRo</a></p>
+        </div>
+      </div>
+    </div>
+    
+    <div class="tiles">
+      <div class="tile">
+        <div class="tile-image" style="background-image: url('povalec_box.png'); background-size: cover; background-position: center;"></div>
+        <div class="tile-content">
+          <h4><a href="https://www.youtube.com/watch?v=KRL_kDbggfc">ČSO • Ptačí migrace na Povalči</a></h4>
+          <p>Náš ornitologický podcast živě na hudebnním festivalu! 45 minut ptačí migrace formou, která zaujme i po prokalené noci. <a href="https://www.youtube.com/watch?v=KRL_kDbggfc">Youtube</a>, <a href="https://open.spotify.com/episode/78OWGXfya2MNdIRL89tW2e?si=mf3iA1h1TYyS1vRrXL0P-A">spotify</a>.</p>
+        </div>
+      </div>
+    </div>
+        <div class="tiles">
+      <div class="tile">
+        <div class="tile-image" style="background-image: url('vrchlabi_box.png'); background-size: cover; background-position: center;"></div>
+        <div class="tile-content">
+          <h4><a href="https://youtu.be/IUohesL2GJM">ČSO • Do Mongolska mezi pastevce, luňáky a rozmrzající permafrost</a></h4>
+          <p>Jak se mění mongolská příroda? A proč může být sledování dopadů klimatických změn ve střední Asii důležité i pro nás? O lesnickém výzkumu i vzdělávání s Václavem Pecinou a Eliškou Víravovou. <a href="https://youtu.be/IUohesL2GJM">Youtube</a>, <a href="https://open.spotify.com/show/3gAMLwai70zuF6a6Aw1HmS?si=bdf06bdc091143e5">spotify</a>.</p>
+        </div>
+      </div>
+    </div>
+  
+    
+  </div>
+
+
+  
+  <div class="section" id="foceni">
+    <div class="section-header" onclick="toggleSection('foceni')">
+      <span>Focení</span>
+      <span class="arrow">▼</span>
+    </div>
+    <div class="tiles">
+      <div class="tile">
+        <div class="tile-image" style="background-image: url('tetrev_box.jpg'); background-size: cover; background-position: center;"></div>
+        <div class="tile-content">
+          <h4>Tetřevi v Beskydech</h4>
+          <p>Dokumentace reintrodukčního programu tetřeva hlušce v moravskoslezských Beskydech. <a href="https://eu.zonerama.com/KubaHrouda/Album/12090191?secret=fX744a558KKJUy0r8bbf2D3CJ">Všechno foto</a>, <a href="https://lesycr.cz/tiskova-zprava/tetrevi-v-beskydech-lesnici-jich-v-zari-vypustili-do-hor-sestadvacet/">tisková zpráva LČR 2024</a> (<a href="https://lesycr.cz/tiskova-zprava/nove-geny-a-pet-volier-v-beskydske-odchovne-tetreva-hlusce/">2023</a>), <a href="https://ekolist.cz/cz/zpravodajstvi/zpravy/lesnici-vypustili-do-beskydske-prirody-26-tetrevu">ČTK/Ekolist</a>, <a href="https://www.idnes.cz/ostrava/zpravy/tetrev-krasna-hlusec-hnizda-voliery.A250422_849216_ostrava-zpravy_dmk">iDnes</a>.</p>
+        </div>
+      </div>
+    </div>
+    <div class="tiles">
+      <div class="tile">
+        <div class="tile-image" style="background-image: url('blokada_box.jpg'); background-size: cover; background-position: center;"></div>
+        <div class="tile-content">
+          <h4>Revue Prostor: Praha blokuje</h4>
+          <p>Fotoreport blokády PPŽ z mostu Legií. <a href="https://eu.zonerama.com/KubaHrouda/Album/11287518?secret=c9QXm2li1f1A7b02BAV20l55K">Všechno foto</a>, <a href="https://revueprostor.cz/jane-scalabroni-cti-otce-sveho-a-delohu-svou">článek Revue Prostor</a>.</p>
+        </div>
+      </div>
+    </div> 
+    <div class="tiles">
+      <div class="tile">
+        <div class="tile-image" style="background-image: url('chvilky_box.png'); background-size: cover; background-position: center;"></div>
+        <div class="tile-content">
+          <h4>e15: Milion chvilek</h4>
+          <p>Fotoreport (nejen) z po-kovidových demonstrací Milionu chvilek. <a href="https://www.e15.cz/clanek/archiv/fotoreportaz-prvni-akce-milionu-chvilek-po-konci-nouzoveho-stavu-1370823">Článek e15</a>.</p>
+        </div>
+      </div>
+    </div> 
+    
+  </div>
+
+  <div class="section" id="reely">
+    <div class="section-header" onclick="toggleSection('reely')">
+      <span>Reely</span>
+      <span class="arrow">▼</span>
+    </div>
+    <div class="tiles">
+      <div class="tile">
+        <div class="tile-image" style="background-image: url('hadi_mord_box.png'); background-size: cover; background-position: center;"></div>
+        <div class="tile-content">
+          <a href="https://www.instagram.com/reel/DOasg6NgOw_/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="><h4>PřF UK: Východokarpatské rostliny</h4></a>
+          <p>Rychlé představení zajímavých druhů rostlin rumunského pohoří Parâng</p>
+        </div>
+      </div>
+    </div>
+  
+      <div class="tiles">
+      <div class="tile">
+        <div class="tile-image" style="background-image: url('snemovna_box.png'); background-size: cover; background-position: center;"></div>
+        <div class="tile-content">
+          <a href="https://www.instagram.com/reel/DKNERdRsVe5/"><h4>ČSO: Sněmovna hlasuje o zákoně 114</h4></a>
+          <p>Mobilizační kampaň ornitologické společnosti proti návrhům degradujícím funkci národních parků</p>
+        </div>
+      </div>
+    </div>
+
+     <div class="tiles">
+      <div class="tile">
+        <div class="tile-image" style="background-image: url('havrani_box.png'); background-size: cover; background-position: center;"></div>
+        <div class="tile-content">
+          <a href="https://www.instagram.com/reel/C3igzNLrSql/"><h4>ČSO: Havrani v Brně</h4></a>
+          <p>Upozorňění na hrozby spojené s plánovanou lanovkou v Brně, jež by ohrozila nocoviště havranů, chráněné druhy a cennou městskou přírodní lokalitu</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+ 
+     
+  
+<br>
+<h3><a href="mailto:jakub.hrouda@gmail.com">jakub.hrouda@gmail.com</a>, <a href="https://www.instagram.com/kuba.hrouda/">Instagram</a>, <a href="https://bsky.app/profile/kuba-hrouda.bsky.social">Bluesky</a>, <a href="https://www.researchgate.net/profile/Jakub-Hrouda">ResearchGate</a></h3>
+<h3>Naposled upraveno 5.3.2026 15:20</h3>
+  
+  <script>
+    function toggleSection(id) {
+      const section = document.getElementById(id);
+      section.classList.toggle('open');
+    }
+  </script>
+
+  
+</body>
+</html>
+
+
+
+
+
+
+
+
